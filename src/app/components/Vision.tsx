@@ -14,20 +14,21 @@ export default function Vision() {
         {/* フロント側の本文 */}
         <div className="w-full mx-auto flex flex-col items-center justify-start gap-3.5 z-10">
           <b className="self-stretch relative text-transparent !bg-clip-text [background:linear-gradient(90deg,_#d9e648,_#f1ab49)] [-webkit-background-clip:text] [-webkit-text-fill-color:transparent] [text-shadow:0px_1px_2px_rgba(0,_0,_0,_0.25)] md:text-2xl">
-            あなたの「〇〇になりたい」を叶えるために
+            IT人材になりたい──
           </b>
           <div className="self-stretch relative text-xs text-white leading-[18px] md:leading-[30px] md:text-base md:mb-4">
             <p className="m-0">
-              Growbase Lab はIT未経験者の第一歩をサポートしたい。
+              その想いを、Growbase Lab は全力で受け止めます。
             </p>
             <p className="m-0">そんな想いで誕生したサービスです。</p>
             <p className="m-0">
-              「自分にできるのかな。」「何が分からないのか分からない。」
+              「自分にできるのかな。」「何から始めればいいのか、そもそもわからない」
             </p>
-            <p className="m-0">そんな不安を一緒に解決するために</p>
+            <p className="m-0">そんな不安、みんなが一度は通る道です。</p>
             <p className="m-0">
-              併走しながらあなたの成長をサポートしていきます。
+              Growbase Lab は、一歩目からあなたの隣で伴走し、
             </p>
+            <p className="m-0">実践を交えながら、一緒に成長していきます。</p>
           </div>
         </div>
       </div>
