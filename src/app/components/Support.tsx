@@ -41,7 +41,7 @@ export default function Support() {
                 }`}
               >
                 <p className="m-0">
-                  学習のつまずきも、キャリアの不安も、相談できる“味方”がいる。
+                  学習のつまずきも、キャリアの不安も、相談できる&quot;味方&quot;がいる。
                 </p>
                 <div className="self-stretch relative leading-[18px]">
                   <p className="m-0">
@@ -86,7 +86,7 @@ export default function Support() {
                     メンターは、業界経験者・現役エンジニア／デザイナー。
                   </p>
                   <p className="m-0">
-                    あなたの学習とキャリアに寄り添う“頼れる伴走者”です。
+                    あなたの学習とキャリアに寄り添う&quot;頼れる伴走者&quot;です。
                   </p>
                 </div>
               </div>
@@ -132,7 +132,7 @@ export default function Support() {
                 }`}
               >
                 <p className="m-0">
-                  学習のつまずきも、キャリアの不安も、相談できる“味方”がいる。
+                  学習のつまずきも、キャリアの不安も、相談できる&quot;味方&quot;がいる。
                 </p>
                 <div className="self-stretch relative leading-[18px]">
                   <p className="m-0">わからない…と思ったら、すぐ聞ける。</p>
@@ -173,7 +173,9 @@ export default function Support() {
                   </p>
                   <p className="m-0">
                     <b className="font-text-sp-short text-blue-primary">{`回答はわかりやすさ重視！ `}</b>
-                    <span>コピペで済ませない“本当に理解できる説明&quot;</span>
+                    <span>
+                      コピペで済ませない&quot;本当に理解できる説明&quot;
+                    </span>
                   </p>
                   <p className="m-0">&nbsp;</p>
                   <p className="m-0">
@@ -216,10 +218,12 @@ export default function Support() {
             />
             <div className="md:flex md:flex-col items-start ">
               <div className="text-center my-[4px]">
-                <b className="text-base">豊富な勉強会の実施</b>
+                <b className="relative text-base md:text-2xl text-center">
+                  豊富な勉強会の実施
+                </b>
               </div>
               <div
-                className={`self-stretch relative leading-[18px] transition-all duration-300 ease-in-out overflow-hidden ${
+                className={`self-stretch relative leading-[18px] transition-all duration-300 ease-in-out overflow-hidden md:text-base ${
                   isExpanded03 ? "max-h-[1000px] opacity-100" : "max-h-[56px] "
                 }`}
               >
@@ -246,7 +250,7 @@ export default function Support() {
                   </b>
                 </p>
                 <p className="m-0">
-                  モチベーションも自然とアップ。“一緒に頑張る”が、あなたの継続を支えます。
+                  モチベーションも自然とアップ。&quot;一緒に頑張る&quot;が、あなたの継続を支えます。
                 </p>
                 <p className="m-0">&nbsp;</p>
                 <p className="m-0">

@@ -4,7 +4,6 @@ import { CourseCard } from "../components/CourseCard";
 import CTA from "../components/CTA";
 import Support from "../components/Support";
 import Carrer from "../components/Carrer";
-import Reason from "../components/Reason";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 
@@ -150,8 +149,6 @@ export default function DetailCourse() {
 
         {/* Growbase Labの転職サポート */}
         <Carrer />
-        {/* 未経験でも採用される理由 */}
-        <Reason />
         {/* 無料カウンセリング申し込み */}
         <ContactForm />
       </main>

@@ -9,7 +9,6 @@ import CTA from "./components/CTA";
 import Curriculum from "./components/Curriculum";
 import Support from "./components/Support";
 import Carrer from "./components/Carrer";
-import Reason from "./components/Reason";
 import Footer from "./components/Footer";
 
 export default function Home() {
@@ -42,9 +41,6 @@ export default function Home() {
 
         {/* Growbase Lab の転職サポート */}
         <Carrer />
-
-        {/* 未経験でも採用される理由 */}
-        <Reason />
 
         {/* FAQ */}
         <FAQSection />
