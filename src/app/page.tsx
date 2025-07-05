@@ -4,7 +4,6 @@ import FAQSection from "./components/FaqSectionAccordion";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Vision from "./components/Vision";
-import Definition from "./components/Definition";
 import Feature from "./components/Feature";
 import CTA from "./components/CTA";
 import Curriculum from "./components/Curriculum";
@@ -25,9 +24,6 @@ export default function Home() {
 
         {/* ビジョンセクション */}
         <Vision />
-
-        {/* 課題の提示 */}
-        <Definition />
 
         {/* 3つの特徴 */}
         <Feature />
