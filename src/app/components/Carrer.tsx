@@ -53,7 +53,7 @@ export default function Support() {
           <div className="md:flex md:flex-col ">
             <div className="my-[4px]">
               <b className="text-base md:text-2xl">
-                あなたの"やりたい"を一緒に探す、キャリア相談
+                あなたの「やりたい」を一緒に探す、キャリア相談
               </b>
             </div>
 
@@ -64,10 +64,10 @@ export default function Support() {
             >
               <p className="m-0 ">
                 Growbase Lab
-                では、技術だけでなく"あなたに合ったキャリア"も一緒に考えます。
+                では、技術だけでなく「あなたに合ったキャリア」も一緒に考えます。
               </p>
               <p className="m-0 ">
-                キャリアに悩む未経験者の"最初の相談先"です。
+                キャリアに悩む未経験者の「最初の相談先」です。
               </p>
               <p className="m-0">&nbsp;</p>
               <p className="m-0">
@@ -92,7 +92,7 @@ export default function Support() {
               <p className="m-0">&nbsp;</p>
               <p>
                 <b className="m-0 text-blue-primary">
-                  スキルを教えるだけでなく、"なりたい姿"を一緒に探すパートナー
+                  スキルを教えるだけでなく、「なりたい姿」を一緒に探すパートナー
                 </b>
                 <span className=" text-gray">
                   として、あなたのキャリア形成を支えていきます。
@@ -165,7 +165,7 @@ export default function Support() {
                 </p>
                 <p className="m-0">&nbsp;</p>
                 <p className="m-0">
-                  これまでのキャリア相談や学習期間などの内容からあなたの強みや経験を分析し、伝わる"カタチ"に落とし込むお手伝いをします。
+                  これまでのキャリア相談や学習期間などの内容からあなたの強みや経験を分析し、伝わる「カタチ」に落とし込むお手伝いをします。
                 </p>
                 <p className="m-0">&nbsp;</p>
                 <p className="m-0">
@@ -246,7 +246,7 @@ export default function Support() {
                 <p className="m-0 text-sm">
                   Growbase Lab では、
                   <b className=" text-blue-primary">
-                    "未経験ならではのアピール"に特化した面接対策
+                    「未経験ならではのアピール」に特化した面接対策
                   </b>
                   <span> を行っています。</span>
                 </p>
@@ -261,7 +261,7 @@ export default function Support() {
                 </p>
                 <p className="m-0">&nbsp;</p>
                 <p className="m-0">
-                  面接がこわいなら、それは"準備不足"なだけ。
+                  面接がこわいなら、それは「準備不足」なだけ。
                 </p>
                 <p className="m-0">
                   <span>準備と練習を通して、</span>
@@ -327,7 +327,7 @@ export default function Support() {
               <div className="md:flex md:flex-col ">
                 <p className="m-0 text-sm">
                   Growbase Lab
-                  では、技術だけでなく"あなたに合ったキャリア"も一緒に考えます。
+                  では、技術だけでなく「あなたに合ったキャリア」も一緒に考えます。
                 </p>
                 <p className="m-0 text-sm">
                   <b className=" text-blue-primary">
@@ -344,7 +344,7 @@ export default function Support() {
                 </p>
                 <p className="m-0">&nbsp;</p>
                 <p className="m-0">
-                  紹介先ごとの"求める人物像・面接傾向"も事前に共有。
+                  紹介先ごとの「求める人物像・面接傾向」も事前に共有。
                 </p>
                 <p className="m-0">&nbsp;</p>
                 <p className="m-0">
@@ -356,10 +356,10 @@ export default function Support() {
                 </p>
                 <p className="m-0">&nbsp;</p>
                 <p className="m-0">
-                  "学んで終わり"じゃなく、"働く未来"までしっかりつなげる。
+                  「学んで終わり」じゃなく、「働く未来」までしっかりつなげる。
                 </p>
                 <p className="m-0">
-                  あなたの"なりたい自分"に近づける企業との出会いを届けます。
+                  あなたの「なりたい自分」に近づける企業との出会いを届けます。
                 </p>
               </div>
             </div>
