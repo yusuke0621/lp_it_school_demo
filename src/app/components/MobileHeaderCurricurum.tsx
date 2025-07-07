@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import logolImage from "../../../public/images/star-college-yoko-color-1.webp";
+import logolImage from "../../../public/images/growbase-lab_logo.png";
 import closeIcon from "../../../public/images/hamburgerClose.svg";
 
 type MobileMenuProps = {
@@ -25,7 +25,7 @@ export default function MobileMenuCurricurum({ onClose }: MobileMenuProps) {
       {/* メニューリンク */}
       <nav className="flex-1 flex flex-col space-y-4 text-blue-secondary text-base font-medium">
         <a href="#feature" onClick={onClose}>
-          Growbase Labの特徴
+          Growbaseの特徴
         </a>
         <a href="#DetailCourse" onClick={onClose}>
           カリキュラム一覧
