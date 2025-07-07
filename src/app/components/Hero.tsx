@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import arrowIcon from "../../../public/images/arrowIcon.svg";
 import mainVisual from "../../../public/images/mainVisual.webp";
@@ -119,12 +120,12 @@ export default function Hero() {
           </div>
 
           <div className="flex justify-center md:justify-start mt-6 mb-10">
-            <a
-              href="#form"
+            <Link
+              href="/contact"
               className="relative z-10 inline-block px-6 md:px-16 py-2 md:py-4 bg-gradient-to-r from-[#9b18c3] to-[#08adff] text-white text-sm md:text-2xl font-semibold rounded shadow hover:opacity-90 transition"
             >
               無料相談会に参加する
-            </a>
+            </Link>
           </div>
         </div>
       </div>

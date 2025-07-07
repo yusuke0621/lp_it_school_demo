@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function CTA() {
   return (
     <section className="bg-blue-secoundary">
@@ -38,12 +40,12 @@ export default function CTA() {
           <p className="m-0">お気軽にご参加ください。</p>
         </div>
         <div className=" relative z-[3]">
-          <a
-            href="#form"
+          <Link
+            href="/contact"
             className="w-[361px] h-[56px] inline-flex items-center justify-center text-base text-white rounded-lg [background:linear-gradient(-88.62deg,_#9b18c3,_#08adff)] shadow hover:opacity-90 transition"
           >
             無料相談会に参加する
-          </a>
+          </Link>
         </div>
       </div>
     </section>

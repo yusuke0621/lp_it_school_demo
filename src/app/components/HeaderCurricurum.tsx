@@ -33,12 +33,12 @@ export default function Header() {
         </div>
 
         <div className="flex items-center space-x-4">
-          <a
+          <Link
             className="text-white text-sm font-semibold px-4 py-2 rounded [background:linear-gradient(-88.62deg,_#9b18c3,_#08adff)] shadow hover:opacity-90 transition p-6"
-            href="#form"
+            href="/contact"
           >
             無料相談会に参加する
-          </a>
+          </Link>
           <button className="md:hidden" onClick={() => setIsOpen(true)}>
             <Image src={hamburgerMenu} alt="メニュー" width={30} height={25} />
           </button>

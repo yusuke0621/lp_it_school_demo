@@ -16,7 +16,7 @@ export default function Header() {
       {/* ドメイン取得後遷移先URLを明示的に指定 */}
       <div className="grid grid-cols-2 gap-y-2 gap-x-10 mb-10 text-xs md:text-base md:w-[50%]">
         <a href="#feature">Growbase Labの特徴</a>
-        <a href="https://eightbit.co.jp/">運営会社</a>
+        <a href="/contact">お問い合わせ</a>
 
         <a href="#curriculum">カリキュラムについて</a>
         <a href=""></a>
