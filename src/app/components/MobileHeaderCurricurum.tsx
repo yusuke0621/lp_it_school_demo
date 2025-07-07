@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import logolImage from "../../../public/images/star-college-yoko-color-1.webp";
 import closeIcon from "../../../public/images/hamburgerClose.svg";
 
@@ -38,13 +39,13 @@ export default function MobileMenuCurricurum({ onClose }: MobileMenuProps) {
       </nav>
 
       {/* CTAボタン */}
-      <a
-        href="#form"
+      <Link
+        href="/contact"
         onClick={onClose}
         className="mt-auto text-white text-sm font-semibold px-4 py-3 rounded text-center rounded [background:linear-gradient(-88.62deg,_#9b18c3,_#08adff)] shadow hover:opacity-90 transition"
       >
         無料相談会に参加する
-      </a>
+      </Link>
     </div>
   );
 }

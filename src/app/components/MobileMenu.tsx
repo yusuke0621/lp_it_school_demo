@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import logolImage from "../../../public/images/star-college-yoko-color-1.webp";
 import closeIcon from "../../../public/images/hamburgerClose.svg";
 
@@ -11,12 +12,14 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
     <div className="fixed inset-0 z-50 bg-white px-6 py-4 flex flex-col">
       {/* ヘッダー部分 */}
       <div className="flex justify-between items-center mb-6">
-        <Image
-          src={logolImage}
-          alt="Growbase Lab ロゴ"
-          width={114}
-          height={36}
-        />
+        <Link href="/" onClick={onClose}>
+          <Image
+            src={logolImage}
+            alt="Growbase Lab ロゴ"
+            width={114}
+            height={36}
+          />
+        </Link>
         <button onClick={onClose}>
           <Image src={closeIcon} alt="閉じる" width={24} height={24} />
         </button>
@@ -44,13 +47,13 @@ export default function MobileMenu({ onClose }: MobileMenuProps) {
       </nav>
 
       {/* CTAボタン */}
-      <a
-        href="#form"
+      <Link
+        href="/contact"
         onClick={onClose}
         className="mt-auto text-white text-sm font-semibold px-4 py-3 rounded text-center rounded [background:linear-gradient(-88.62deg,_#9b18c3,_#08adff)] shadow hover:opacity-90 transition"
       >
         無料相談会に参加する
-      </a>
+      </Link>
     </div>
   );
 }

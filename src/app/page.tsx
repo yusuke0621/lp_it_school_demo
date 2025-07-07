@@ -1,5 +1,4 @@
 // Components
-import ContactForm from "./components/ContactForm";
 import FAQSection from "./components/FaqSectionAccordion";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -44,9 +43,6 @@ export default function Home() {
 
         {/* FAQ */}
         <FAQSection />
-
-        {/* 無料カウンセリング申し込み */}
-        <ContactForm />
       </main>
       <Footer />
     </>
