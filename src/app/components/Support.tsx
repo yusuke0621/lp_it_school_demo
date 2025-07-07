@@ -20,16 +20,16 @@ export default function Support() {
       box-border gap-6 text-center text-2xl md:text-3xl text-color-text font-text-sp-h3"
       >
         <b className="self-stretch relative">Growbase Lab の学習サポート</b>
-        <div className="flex flex-col items-start justify-start gap-4 text-left text-xs">
-          <div className="w-full relative md:flex md:flex-row md:gap-4">
+        <div className="flex flex-col items-start justify-start gap-4 text-left text-xs max-w-[1400px] mx-auto w-full">
+          <div className="w-full relative md:flex md:flex-row md:gap-8">
             <Image
-              className="w-full md:max-w-[480px] object-cover rounded-lg"
+              className="w-full md:w-[480px] object-cover rounded-lg"
               width={520}
               height={200}
               alt=""
               src={study_support_1}
             />
-            <div className="md:flex md:flex-col items-start ">
+            <div className="md:flex md:flex-col items-start md:flex-1">
               <div className="text-center my-[4px]">
                 <b className="relative text-base md:text-2xl text-center">
                   メンター制度
@@ -92,7 +92,7 @@ export default function Support() {
               </div>
               <button
                 onClick={() => setIsExpanded01(!isExpanded01)}
-                className="w-full flex items-center justify-end mt-2 items-center gap-2 text-xs "
+                className="w-full flex items-center justify-end gap-2 mt-2 flex items-center gap-2 text-xs "
               >
                 <span
                   className={`flex items-center gap-2 text-xs ${
@@ -112,15 +112,15 @@ export default function Support() {
             </div>
           </div>
 
-          <div className="w-full relative md:flex md:flex-row md:gap-4">
+          <div className="w-full relative md:flex md:flex-row md:gap-8">
             <Image
-              className="w-full md:max-w-[480px] object-cover rounded-lg"
+              className="w-full md:w-[480px] object-cover rounded-lg"
               width={361}
               height={200}
               alt=""
               src={study_support_2}
             />
-            <div className="md:flex md:flex-col items-start ">
+            <div className="md:flex md:flex-col items-start md:flex-1">
               <div className="text-center my-[4px]">
                 <b className="relative text-base md:text-2xl text-center">
                   質問対応
@@ -208,15 +208,15 @@ export default function Support() {
               </button>
             </div>
           </div>
-          <div className="w-full relative md:flex md:flex-row md:gap-4">
+          <div className="w-full relative md:flex md:flex-row md:gap-8">
             <Image
-              className="w-full md:max-w-[480px] object-cover rounded-lg"
+              className="w-full md:w-[480px] object-cover rounded-lg"
               width={361}
               height={200}
               alt=""
               src={study_support_3}
             />
-            <div className="md:flex md:flex-col items-start ">
+            <div className="md:flex md:flex-col items-start md:flex-1">
               <div className="text-center my-[4px]">
                 <b className="relative text-base md:text-2xl text-center">
                   豊富な勉強会の実施

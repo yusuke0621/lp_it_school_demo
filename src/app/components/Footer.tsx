@@ -31,7 +31,7 @@ export default function Header() {
 
       {/* コピーライト */}
       <p className="text-xs text-center text-white/70">
-        © ITStar Collage Inc. ALL right reserved
+        © Growbase Lab Inc. ALL right reserved
       </p>
     </footer>
   );
