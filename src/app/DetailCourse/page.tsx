@@ -4,7 +4,6 @@ import { CourseCard } from "../components/CourseCard";
 import CTA from "../components/CTA";
 import Support from "../components/Support";
 import Carrer from "../components/Carrer";
-import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";
 
 import js_icon from "../../../public/images/js-1.svg";
@@ -14,6 +13,7 @@ import linux_icon from "../../../public/images/linux-1.svg";
 import network_icon from "../../../public/images/network.svg";
 import photoshop_icon from "../../../public/images/adobe-photoshop.svg";
 import figma_icon from "../../../public/images/figma_icon.svg";
+import chatgpt_icon from "../../../public/images/chatgpt-icon.svg";
 
 export default function DetailCourse() {
   return (
@@ -103,6 +103,7 @@ export default function DetailCourse() {
                   "インフラストラクチャーサービス",
                 ]}
               />
+
               <div className=" w-[280px]">{""}</div>
             </div>
             <div className="flex flex-col md:flex-row gap-6 justify-center">
@@ -134,6 +135,24 @@ export default function DetailCourse() {
                   "機能要件定義",
                 ]}
               />
+
+              <div className=" w-[280px]">{""}</div>
+            </div>
+            <div className="flex flex-col md:flex-row gap-6 justify-center">
+              <CourseCard
+                title="AIコース"
+                icon={chatgpt_icon}
+                description="ChatGPTをはじめとした様々な生成AIツールを学びます。ツールの活用方法だけでなく、AIの仕組みや倫理、実践的な活用方法を学びます。"
+                skills={[
+                  "AI基礎",
+                  "機械学習",
+                  "生成AI活用",
+                  "業務効率",
+                  "AI倫理・実践",
+                  "プロンプト",
+                ]}
+              />
+              <div className=" w-[280px]">{""}</div>
               <div className=" w-[280px]">{""}</div>
             </div>
           </div>
@@ -149,8 +168,6 @@ export default function DetailCourse() {
 
         {/* Growbase Labの転職サポート */}
         <Carrer />
-        {/* 無料カウンセリング申し込み */}
-        <ContactForm />
       </main>
       <Footer />
     </>
