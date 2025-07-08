@@ -82,7 +82,7 @@ export default function ContactForm() {
   return (
     <section
       id="form"
-      className="w-full relative bg-white overflow-hidden
+      className="w-full relative bg-black overflow-hidden
       flex flex-col items-center py-10 px-6"
     >
       <h2 className="text-2xl md:text-3xl font-semibold text-center mb-4">
@@ -104,10 +104,8 @@ export default function ContactForm() {
             type="text"
             {...register("full_name")}
             placeholder="山田 太郎"
-            className={`w-full p-3 border rounded ${
-              errors.full_name
-                ? "bg-err-bg border-red-400"
-                : "bg-white border-gray-300"
+            className={`w-full p-3 border rounded bg-white text-black ${
+              errors.full_name ? "border-red-400" : "border-gray-300"
             }`}
           />
           {errors.full_name && (
@@ -126,10 +124,8 @@ export default function ContactForm() {
             type="text"
             {...register("furigana")}
             placeholder="ヤマダ タロウ"
-            className={`w-full p-3 border rounded ${
-              errors.full_name
-                ? "bg-err-bg border-red-400"
-                : "bg-white border-gray-300"
+            className={`w-full p-3 border rounded bg-white text-black ${
+              errors.furigana ? "border-red-400" : "border-gray-300"
             }`}
           />
           {errors.furigana && (
@@ -147,10 +143,8 @@ export default function ContactForm() {
             type="email"
             {...register("email")}
             placeholder="sample@mail.com"
-            className={`w-full p-3 border rounded ${
-              errors.full_name
-                ? "bg-err-bg border-red-400"
-                : "bg-white border-gray-300"
+            className={`w-full p-3 border rounded bg-white text-black ${
+              errors.email ? "border-red-400" : "border-gray-300"
             }`}
           />
           {errors.email && (
@@ -168,10 +162,8 @@ export default function ContactForm() {
             type="tel"
             {...register("tel")}
             placeholder="080-1234-5678"
-            className={`w-full p-3 border rounded ${
-              errors.full_name
-                ? "bg-err-bg border-red-400"
-                : "bg-white border-gray-300"
+            className={`w-full p-3 border rounded bg-white text-black ${
+              errors.tel ? "border-red-400" : "border-gray-300"
             }`}
           />
           {errors.tel && (
@@ -259,9 +251,9 @@ export default function ContactForm() {
                 onChange={() => {
                   setHasSelected(true);
                 }}
-                className={`w-full p-3 border rounded ${
+                className={`w-full p-3 border rounded bg-white ${
                   errors.preferred_date_1
-                    ? "bg-err-bg border-red-400"
+                    ? "border-red-400"
                     : hasSelected
                       ? "text-black border-gray-300"
                       : "text-gray-500 border-gray-300"
@@ -287,9 +279,9 @@ export default function ContactForm() {
                 onChange={() => {
                   setHasSelected(true);
                 }}
-                className={`w-full p-3 border rounded ${
+                className={`w-full p-3 border rounded bg-white ${
                   errors.preferred_date_1
-                    ? "bg-err-bg border-red-400"
+                    ? "border-red-400"
                     : hasSelected
                       ? "text-black border-gray-300"
                       : "text-gray-500 border-gray-300"
@@ -315,9 +307,9 @@ export default function ContactForm() {
                 onChange={() => {
                   setHasSelected(true);
                 }}
-                className={`w-full p-3 border rounded ${
+                className={`w-full p-3 border rounded bg-white ${
                   errors.preferred_date_1
-                    ? "bg-err-bg border-red-400"
+                    ? "border-red-400"
                     : hasSelected
                       ? "text-black border-gray-300"
                       : "text-gray-500 border-gray-300"
@@ -342,7 +334,7 @@ export default function ContactForm() {
           <textarea
             {...register("message")}
             placeholder="ご記入ください"
-            className="w-full p-3 border border-gray-300 rounded h-54"
+            className="w-full p-3 border border-gray-300 rounded h-54 bg-white text-black"
           ></textarea>
         </div>
         <p className="text-center text-[10px] ">
@@ -351,7 +343,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`w-full p-3 text-white text-sm font-semibold px-4 py-4 rounded [background:linear-gradient(-88.62deg,_#9b18c3,_#08adff)] shadow hover:opacity-90 transition p-6
+          className={`w-full p-3 text-white text-sm font-semibold px-4 py-4 rounded [background:linear-gradient(90deg,_#ff2e9f_6%,_#4e31ff_41%,_#9916ff_79%,_#d52bff)] shadow hover:opacity-90 transition p-6
              ${
                isSubmitting
                  ? "bg-gray-400 cursor-not-allowed"
