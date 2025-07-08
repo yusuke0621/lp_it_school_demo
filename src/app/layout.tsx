@@ -26,7 +26,9 @@ export default function RootLayout({
     <html lang="ja" className={notoSansJP.variable}>
       <Analytics />
       <body className="min-h-screen bg-[#111111] text-white">
-        <main className="relative overflow-hidden">{children}</main>
+        <main className="relative overflow-hidden pt-[80px] md:pt-[70px]">
+          {children}
+        </main>
       </body>
     </html>
   );

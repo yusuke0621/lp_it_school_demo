@@ -9,81 +9,83 @@ import MobileMenu from "./MobileMenu";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="sticky bg-[#111111] top-0 z-50 w-full md:w-[95%] mx-auto md:mt-2">
-      <div
-        className="flex justify-between items-center px-4 py-3 mx-auto 
-          shadow-[2px_2px_2px_rgba(0,_0,_0,_0.25)] rounded bg-[#111111] h-[60px]"
-      >
-        <div className="flex items-center">
-          <Link href="/">
-            <Image
-              className="relative overflow-hidden max-h-full object-cover brightness-0 invert"
-              width={114}
-              height={36}
-              alt="Growbase Lab ロゴ"
-              src={logolImage}
-            />
-          </Link>
-          {/* ナビゲーション（PCのみ表示） */}
-          <nav className="hidden md:flex space-x-6 text-sm font-semibold ml-4">
-            <a
-              href="#feature"
-              className="bg-gradient-to-r from-[#ff2e9f] via-[#4e31ff] via-[#9916ff] to-[#d52bff] inline-block text-transparent bg-clip-text hover:opacity-80 transition-opacity"
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#111111]">
+      <div className="w-full md:w-[95%] mx-auto md:mt-2">
+        <div
+          className="flex justify-between items-center px-4 py-3 mx-auto 
+            shadow-[2px_2px_2px_rgba(0,_0,_0,_0.25)] rounded bg-[#111111] h-[60px]"
+        >
+          <div className="flex items-center">
+            <Link href="/">
+              <Image
+                className="relative overflow-hidden max-h-full object-cover brightness-0 invert"
+                width={114}
+                height={36}
+                alt="Growbase Lab ロゴ"
+                src={logolImage}
+              />
+            </Link>
+            {/* ナビゲーション（PCのみ表示） */}
+            <nav className="hidden md:flex space-x-6 text-sm font-semibold ml-4">
+              <a
+                href="#feature"
+                className="bg-gradient-to-r from-[#ff2e9f] via-[#4e31ff] via-[#9916ff] to-[#d52bff] inline-block text-transparent bg-clip-text hover:opacity-80 transition-opacity"
+              >
+                Growbaseの特徴
+              </a>
+              <a
+                href="#curriculum"
+                className="bg-gradient-to-r from-[#ff2e9f] via-[#4e31ff] via-[#9916ff] to-[#d52bff] inline-block text-transparent bg-clip-text hover:opacity-80 transition-opacity"
+              >
+                カリキュラムについて
+              </a>
+              <a
+                href="/DetailCourse"
+                className="bg-gradient-to-r from-[#ff2e9f] via-[#4e31ff] via-[#9916ff] to-[#d52bff] inline-block text-transparent bg-clip-text hover:opacity-80 transition-opacity"
+              >
+                カリキュラム一覧
+              </a>
+              <a
+                href="#support"
+                className="bg-gradient-to-r from-[#ff2e9f] via-[#4e31ff] via-[#9916ff] to-[#d52bff] inline-block text-transparent bg-clip-text hover:opacity-80 transition-opacity"
+              >
+                学習サポート
+              </a>
+              <a
+                href="#career"
+                className="bg-gradient-to-r from-[#ff2e9f] via-[#4e31ff] via-[#9916ff] to-[#d52bff] inline-block text-transparent bg-clip-text hover:opacity-80 transition-opacity"
+              >
+                転職サポート
+              </a>
+              <a
+                href="#faq"
+                className="bg-gradient-to-r from-[#ff2e9f] via-[#4e31ff] via-[#9916ff] to-[#d52bff] inline-block text-transparent bg-clip-text hover:opacity-80 transition-opacity"
+              >
+                よくある質問
+              </a>
+            </nav>
+          </div>
+          <div className="flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="text-white text-sm font-semibold px-4 py-2 rounded [background:linear-gradient(90deg,_#ff2e9f_6%,_#4e31ff_41%,_#9916ff_79%,_#d52bff)] shadow hover:opacity-90 transition p-6"
             >
-              Growbaseの特徴
-            </a>
-            <a
-              href="#curriculum"
-              className="bg-gradient-to-r from-[#ff2e9f] via-[#4e31ff] via-[#9916ff] to-[#d52bff] inline-block text-transparent bg-clip-text hover:opacity-80 transition-opacity"
-            >
-              カリキュラムについて
-            </a>
-            <a
-              href="/DetailCourse"
-              className="bg-gradient-to-r from-[#ff2e9f] via-[#4e31ff] via-[#9916ff] to-[#d52bff] inline-block text-transparent bg-clip-text hover:opacity-80 transition-opacity"
-            >
-              カリキュラム一覧
-            </a>
-            <a
-              href="#support"
-              className="bg-gradient-to-r from-[#ff2e9f] via-[#4e31ff] via-[#9916ff] to-[#d52bff] inline-block text-transparent bg-clip-text hover:opacity-80 transition-opacity"
-            >
-              学習サポート
-            </a>
-            <a
-              href="#career"
-              className="bg-gradient-to-r from-[#ff2e9f] via-[#4e31ff] via-[#9916ff] to-[#d52bff] inline-block text-transparent bg-clip-text hover:opacity-80 transition-opacity"
-            >
-              転職サポート
-            </a>
-            <a
-              href="#faq"
-              className="bg-gradient-to-r from-[#ff2e9f] via-[#4e31ff] via-[#9916ff] to-[#d52bff] inline-block text-transparent bg-clip-text hover:opacity-80 transition-opacity"
-            >
-              よくある質問
-            </a>
-          </nav>
+              無料相談会に参加する
+            </Link>
+            <button className="md:hidden" onClick={() => setIsOpen(true)}>
+              <Image
+                src={hamburgerMenu}
+                alt="メニュー"
+                width={30}
+                height={25}
+                className="brightness-0 invert"
+              />
+            </button>
+          </div>
         </div>
-        <div className="flex items-center space-x-4">
-          <Link
-            href="/contact"
-            className="text-white text-sm font-semibold px-4 py-2 rounded [background:linear-gradient(90deg,_#ff2e9f_6%,_#4e31ff_41%,_#9916ff_79%,_#d52bff)] shadow hover:opacity-90 transition p-6"
-          >
-            無料相談会に参加する
-          </Link>
-          <button className="md:hidden" onClick={() => setIsOpen(true)}>
-            <Image
-              src={hamburgerMenu}
-              alt="メニュー"
-              width={30}
-              height={25}
-              className="brightness-0 invert"
-            />
-          </button>
-        </div>
+        {/* モバイルメニュー */}
+        {isOpen && <MobileMenu onClose={() => setIsOpen(false)} />}
       </div>
-      {/* モバイルメニュー */}
-      {isOpen && <MobileMenu onClose={() => setIsOpen(false)} />}
     </header>
   );
 }
