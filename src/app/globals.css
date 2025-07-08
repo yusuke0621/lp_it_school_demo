@@ -309,6 +309,17 @@ body {
   transition-delay: 0.5s;
 }
 
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes fadeInRight {
   from {
     opacity: 0;
@@ -320,9 +331,18 @@ body {
   }
 }
 
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
 .fade-in-right {
   opacity: 0;
   transform: translateX(50px);
+}
+
+.fade-in-left.visible {
+  animation: fadeInLeft 0.8s ease-out forwards;
 }
 
 .fade-in-right.visible {
