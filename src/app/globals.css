@@ -223,3 +223,60 @@ body {
   white-space: nowrap;
   animation: marquee 60s linear infinite;
 }
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.feature-item {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+.feature-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.feature-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.feature-item:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.feature-item:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+.feature-section > div {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease-out;
+}
+
+.feature-section > div:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.feature-section > div:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.feature-section > div:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+.feature-section.visible > div {
+  opacity: 1;
+  transform: translateX(0);
+}

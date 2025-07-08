@@ -2,10 +2,10 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import rounded01 from "../../../public/images/a-otf_01.svg";
-import rounded02 from "../../../public/images/a-otf_02.svg";
-import rounded03 from "../../../public/images/a-otf_03.svg";
-import rounded04 from "../../../public/images/a-otf_04.svg";
+import rounded01 from "../../../public/images/a-otf_01.png";
+import rounded02 from "../../../public/images/a-otf_02.png";
+import rounded03 from "../../../public/images/a-otf_03.png";
+import rounded04 from "../../../public/images/a-otf_04.png";
 
 import career_support_1 from "../../../public/images/mask-group-31.webp";
 import career_support_2 from "../../../public/images/mask-group-32.webp";
