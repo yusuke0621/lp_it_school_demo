@@ -42,7 +42,7 @@ export default function CTA() {
         <div className=" relative z-[3]">
           <Link
             href="/contact"
-            className="w-[361px] h-[56px] inline-flex items-center justify-center text-base text-white rounded-lg [background:linear-gradient(-88.62deg,_#9b18c3,_#08adff)] shadow hover:opacity-90 transition"
+            className="w-[361px] h-[56px] inline-flex items-center justify-center text-base text-white rounded-lg [background:linear-gradient(90deg,_#ff2e9f_6%,_#4e31ff_41%,_#9916ff_79%,_#d52bff)]  shadow hover:opacity-90 transition"
           >
             無料相談会に参加する
           </Link>

@@ -1,9 +1,12 @@
 import Image from "next/image";
-import logo_black from "../../../public/images//logo_black.webp";
+import logo_black from "../../../public/images/growbase-lab_logologo_bk.png";
 
-export default function Header() {
+export default function Footer() {
   return (
-    <footer className=" pt-10 px-4 md:px-30 bg-black text-white text-sm">
+    <footer
+      className="pt-10 px-4 md:px-30 text-white text-sm"
+      style={{ background: "linear-gradient(-28.16deg, #b978ff33, #65baf233)" }}
+    >
       <div className="mb-6">
         <Image
           className="overflow-hidden shrink-0 z-[3]"

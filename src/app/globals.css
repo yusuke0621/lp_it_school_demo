@@ -1,12 +1,13 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #d4eeff;
-  --font-noto-sans-jp: 'Noto Sans JP', sans-serif;
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 17, 17;
+  --background-end-rgb: 0, 0, 0;
+  --font-noto-sans-jp: "Noto Sans JP", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,8 +18,12 @@
 }
 
 body {
-  background: var(--foreground);
-  color: inherit;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
   font-family: var(--font-noto-sans-jp), sans-serif;
   content: var(--font-mplus-rounded);
   display: block;
@@ -27,9 +32,11 @@ body {
 @theme {
   --color-blue-primary: #187fc3;
   --color-blue-secondary: #08adff;
+  --color-pink-primary: #ff69b4;
+  --color-pink-secondary: #ffb6c1;
   --color-blue-bg: #cae5ed;
   --color-blue-any: #2283ba;
-  --color-cornsilk: #fff5d8;
+  --color-cornsilk: #d0f0ff;
   --color-darkgoldenrod: #c39518;
   --color-close-icon: #c3a618;
   --color-red-required: #ba3422;
@@ -41,103 +48,162 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 0;
-  left: 0;
   z-index: 0;
   overflow: hidden;
+  top: 0;
+  left: 0;
 }
 
-.bubble-bg .bubble {
+.bubble {
   position: absolute;
-  background: #1587d899;
-  border-radius: 60% 40% 70% 30% / 50% 60% 40% 70%;
-  animation: wobble 6s ease-in-out infinite;
-  filter: blur(1px);
-  opacity: 0.2;
+  left: var(--bubble-left-offset);
+  bottom: -75%;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  animation: float-up 15s infinite ease-in;
+  background: linear-gradient(
+    90deg,
+    #ff2e9f 6%,
+    #4e31ff 41%,
+    #9916ff 79%,
+    #d52bff
+  );
+  opacity: 0.15;
 }
 
-/* ランダム配置（floatUpなし） */
 .bubble:nth-child(1) {
-  top: -10%;
-  left: -15%;
-  width: 360px;
-  height: 140px;
-  transform: rotate(15deg);
+  --bubble-left-offset: 10%;
+  width: 60px;
+  height: 60px;
   animation-delay: 0s;
 }
+
 .bubble:nth-child(2) {
-  top: 0%;
-  left: 90%;
-  width: 94px;
-  height: 238px;
-  transform: rotate(15deg);
-  animation-delay: 0s;
+  --bubble-left-offset: 30%;
+  width: 45px;
+  height: 45px;
+  animation-delay: 2s;
 }
+
 .bubble:nth-child(3) {
-  top: 30%;
-  left: -15%;
-  width: 398px;
-  height: 154px;
-  transform: rotate(15deg);
-  animation-delay: 0s;
+  --bubble-left-offset: 50%;
+  width: 50px;
+  height: 50px;
+  animation-delay: 4s;
 }
+
 .bubble:nth-child(4) {
-  top: 35%;
-  left: 75%;
-  width: 498px;
-  height: 304px;
-  transform: rotate(15deg);
-  animation-delay: 0s;
+  --bubble-left-offset: 70%;
+  width: 55px;
+  height: 55px;
+  animation-delay: 6s;
 }
+
 .bubble:nth-child(5) {
-  top: 70%;
-  left: -20%;
-  animation-delay: 1.5s;
-  width: 680px;
-  height: 280px;
-  transform: rotate(15deg);
-  animation-delay: 0s;
+  --bubble-left-offset: 90%;
+  width: 40px;
+  height: 40px;
+  animation-delay: 8s;
 }
 
-/* --- PC用（768px以上）に上書き --- */
+@keyframes float-up {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(-800px) rotate(180deg);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(-1000px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* カードのホバーエフェクト */
+.card-hover {
+  transition: all 0.3s ease;
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(17, 17, 17, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* グラデーションテキスト */
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #ff2e9f 6%,
+    #4e31ff 41%,
+    #9916ff 79%,
+    #d52bff
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.text-color-black {
+  color: #111111;
+}
+
+/* セクション共通スタイル */
+.section-padding {
+  padding: 4rem 1rem;
+}
+
 @media (min-width: 768px) {
-  .bubble:nth-child(1) {
-    top: -25%;
-    left: -20%;
-    width: 800px;
-    height: 300px;
-  }
-
-  .bubble:nth-child(2) {
-    top: -10%;
-    left: 85%;
-    width: 150px;
-    height: 300px;
-  }
-
-  .bubble:nth-child(3) {
-    top: 35%;
-    left: 30%;
-    width: 200px;
-    height: 220px;
-  }
-
-  .bubble:nth-child(4) {
-    top: 40%;
-    left: 80%;
-    width: 0px;
-    height: 0px;
-  }
-
-  .bubble:nth-child(5) {
-    top: 75%;
-    left: -25%;
-    width: 500px;
-    height: 300px;
+  .section-padding {
+    padding: 6rem 2rem;
   }
 }
 
-/* ゆらゆら揺れる */
+/* コンテナ共通スタイル */
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* グラデーションボーダー */
+.gradient-border {
+  position: relative;
+  background: #111111;
+  padding: 1px;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  padding: 1px;
+  background: linear-gradient(
+    90deg,
+    #ff2e9f 6%,
+    #4e31ff 41%,
+    #9916ff 79%,
+    #d52bff
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
 @keyframes wobble {
   0%,
   100% {
@@ -161,4 +227,124 @@ body {
   display: inline-block;
   white-space: nowrap;
   animation: marquee 60s linear infinite;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.feature-item {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease-out;
+}
+
+.feature-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.feature-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.feature-item:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.feature-item:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+.feature-section > div {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s ease-out;
+}
+
+.feature-section > div:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.feature-section > div:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.feature-section > div:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+.feature-section.visible > div {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.course-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.course-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.course-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.course-item:nth-child(2) {
+  transition-delay: 0.3s;
+}
+
+.course-item:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.fade-in-left.visible {
+  animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.fade-in-right.visible {
+  animation: fadeInRight 0.8s ease-out forwards;
 }
