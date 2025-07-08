@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ja" className={notoSansJP.variable}>
+    <html lang="ja" className={notoSansJP.variable} suppressHydrationWarning>
       <Analytics />
       <body className="min-h-screen bg-[#111111] text-white">
         <main className="relative overflow-hidden pt-[80px] md:pt-[70px]">
