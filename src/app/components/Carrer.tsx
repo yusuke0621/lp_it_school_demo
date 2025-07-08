@@ -196,7 +196,7 @@ export default function Support() {
                     ポートフォリオや履歴書・職務経歴書
                   </b>
                   <span>
-                    まで、"あなたらしさ"が伝わるように一緒に言語化・ブラッシュアップしていきます。
+                    まで、「あなたらしさ」が伝わるように一緒に言語化・ブラッシュアップしていきます。
                   </span>
                 </p>
                 <p className="m-0 text-sm">
@@ -285,7 +285,7 @@ export default function Support() {
                   そんな不安を、自信に変えるのがGrowbaseの面接サポートです。
                 </p>
                 <p className="m-0 text-sm">
-                  Growbaseでは、未経験でもしっかり伝えられるよう、"伝え方"に特化した面接対策を行っています。
+                  Growbaseでは、未経験でもしっかり伝えられるよう、「伝え方」に特化した面接対策を行っています。
                 </p>
                 <p className="m-0">&nbsp;</p>
                 <p className="m-0 text-sm">
