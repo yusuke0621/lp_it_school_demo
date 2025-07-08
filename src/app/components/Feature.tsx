@@ -93,9 +93,7 @@ export default function Feature() {
       id="feature"
       className="bg-black py-10 px-4 md:px-20 text-color-text"
     >
-      <h2 className="text-center text-lg md:text-2xl font-bold">
-        Growbase Lab
-      </h2>
+      <h2 className="text-center text-lg md:text-2xl font-bold">Growbase</h2>
       <h3 className="text-center text-2xl md:text-3xl font-bold mb-10">
         3つの特徴
       </h3>

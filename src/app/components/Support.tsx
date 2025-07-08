@@ -1,10 +1,10 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
-import study_support_1 from "../../../public/images/mask-group-21.webp";
-import study_support_2 from "../../../public/images/mask-group-22.webp";
-import study_support_3 from "../../../public/images/mask-group-23.webp";
+import study_support_1 from "../../../public/images/sunset-1807524_1280.jpg";
+import study_support_2 from "../../../public/images/technology-3361983_1280.jpg";
+import study_support_3 from "../../../public/images/bruce-mars-xj8qrWvuOEs-unsplash.jpg";
 import open_icon from "../../../public/images//open_icon.svg";
 import close_icon from "../../../public/images/close_icon.svg";
 
@@ -13,15 +13,46 @@ export default function Support() {
   const [isExpanded02, setIsExpanded02] = useState(false);
   const [isExpanded03, setIsExpanded03] = useState(false);
 
+  const support1Ref = useRef<HTMLDivElement>(null);
+  const support2Ref = useRef<HTMLDivElement>(null);
+  const support3Ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const elements = [
+      support1Ref.current,
+      support2Ref.current,
+      support3Ref.current,
+    ];
+    elements.forEach((el) => el && observer.observe(el));
+
+    return () => {
+      elements.forEach((el) => el && observer.unobserve(el));
+    };
+  }, []);
+
   return (
-    <section id="support" className="px-4 bg-white">
+    <section id="support" className="px-4 bg-black">
       <div
         className="w-full relative flex flex-col items-center justify-start py-10 md:py-20 px-0 md:px-30 md:mb-10
       box-border gap-6 text-center text-2xl md:text-3xl text-color-text font-text-sp-h3"
       >
-        <b className="self-stretch relative">Growbase Lab の学習サポート</b>
+        <b className="self-stretch relative">Growbase の学習サポート</b>
         <div className="flex flex-col items-start justify-start gap-4 text-left text-xs max-w-[1400px] mx-auto w-full">
-          <div className="w-full relative md:flex md:flex-row md:gap-8">
+          <div
+            ref={support1Ref}
+            className="w-full relative md:flex md:flex-row md:gap-8 fade-in-right"
+          >
             <Image
               className="w-full md:w-[480px] object-cover rounded-lg"
               width={520}
@@ -29,10 +60,11 @@ export default function Support() {
               alt=""
               src={study_support_1}
             />
+
             <div className="md:flex md:flex-col items-start md:flex-1">
               <div className="text-center my-[4px]">
                 <b className="relative text-base md:text-2xl text-center">
-                  メンター制度
+                  伴走サポート
                 </b>
               </div>
               <div
@@ -40,53 +72,49 @@ export default function Support() {
                   isExpanded01 ? "max-h-[1000px] opacity-100" : "max-h-[56px] "
                 }`}
               >
-                <p className="m-0">
-                  学習のつまずきも、キャリアの不安も、相談できる&quot;味方&quot;がいる。
-                </p>
+                <p className="m-0">ひとりで頑張らなくていい。</p>
                 <div className="self-stretch relative leading-[18px]">
                   <p className="m-0">
                     <span className="font-text-sp-short text-gray">
-                      Growbase Lab では、受講生一人ひとりに
+                      Growbaseでは、あなたの「できたらいいな」を一緒に形にしてくれる、
                     </span>
-                    <b className="font-text-sp-short text-blue-primary">
-                      専属メンター
+                    <b className="font-text-sp-short text-pink-primary">
+                      心強い伴走パートナー
                     </b>
                     <span>がつきます。</span>
                   </p>
                   <p className="m-0">&nbsp;</p>
                   <p className="m-0">
-                    学習の進め方から技術的な質問、キャリア相談まで、なんでも気軽に相談OK。
+                    わからないこと、つまずいたとき、不安なとき、
                   </p>
                   <p className="m-0">
-                    <span>学習のつまずきや不安を</span>
-                    <b className="font-text-sp-short text-blue-primary">
-                      チャットでいつでも質問可能。
+                    <b className="font-text-sp-short text-pink-primary">
+                      気軽にチャットで相談できるから、ひとりで抱え込まずに前に進めます。
                     </b>
                   </p>
                   <p className="m-0">
                     <span className="font-text-sp-short text-gray">
-                      「次に何をやればいい？」が明確になる
+                      「次に何をやればいいんだろう？」という迷いも、
                     </span>
-                    <b className="font-text-sp-short text-blue-primary">
-                      ロードマップの相談
+                    <b className="font-text-sp-short text-pink-primary">
+                      一緒にロードマップを整理することで、やるべきことがクリアに。
                     </b>
                     <span className="font-text-sp-short text-gray">
-                      や転職や副業に向けた
+                      学習のことだけじゃなく、「仕事につなげたい」「自信がない」そんな思いにも寄り添いながら、
                     </span>
-                    <b className="font-text-sp-short text-blue-primary">
-                      キャリア相談・方向性の整理
+                    <b className="font-text-sp-short text-pink-primary">
+                      あなたらしいゴールまで、一緒に歩いていきます。
                     </b>
-                    <span>も対応。</span>
                   </p>
                   <p className="m-0">
                     「わからない」「続かない」を防ぐための、心強いサポート体制です。
                   </p>
                   <p className="m-0">&nbsp;</p>
                   <p className="m-0">
-                    メンターは、業界経験者・現役エンジニア／デザイナー。
+                    サポートするのは、現役エンジニアやデザイナー、キャリア経験も豊富な人たち。
                   </p>
                   <p className="m-0">
-                    あなたの学習とキャリアに寄り添う&quot;頼れる伴走者&quot;です。
+                    ひとりじゃないって、きっと思えるはずです。
                   </p>
                 </div>
               </div>
@@ -96,7 +124,7 @@ export default function Support() {
               >
                 <span
                   className={`flex items-center gap-2 text-xs ${
-                    isExpanded01 ? "text-close-icon" : "text-blue-secondary"
+                    isExpanded01 ? "text-close-icon" : "text-pink-secondary"
                   }`}
                 >
                   {isExpanded01 ? "とじる" : "もっと見る"}
@@ -112,7 +140,10 @@ export default function Support() {
             </div>
           </div>
 
-          <div className="w-full relative md:flex md:flex-row md:gap-8">
+          <div
+            ref={support2Ref}
+            className="w-full relative md:flex md:flex-row md:gap-8 fade-in-right"
+          >
             <Image
               className="w-full md:w-[480px] object-cover rounded-lg"
               width={361}
@@ -126,74 +157,75 @@ export default function Support() {
                   質問対応
                 </b>
               </div>
+
               <div
                 className={`self-stretch relative leading-[18px] transition-all duration-300 ease-in-out overflow-hidden md:text-base ${
                   isExpanded02 ? "max-h-[1000px] opacity-100" : "max-h-[56px] "
                 }`}
               >
                 <p className="m-0">
-                  学習のつまずきも、キャリアの不安も、相談できる&quot;味方&quot;がいる。
+                  「これ、なんだろう？」「エラーが消えない…」
                 </p>
                 <div className="self-stretch relative leading-[18px]">
-                  <p className="m-0">わからない…と思ったら、すぐ聞ける。</p>
+                  <p className="m-0">
+                    そんな時、すぐ聞けたら、きっと安心できるはず。
+                  </p>
                   <p className="m-0">
                     <span className="font-text-sp-short text-gray">
-                      Growbase Lab では、
+                      Growbase では、
                     </span>
-                    <b className="font-text-sp-short text-blue-primary">
-                      いつでも質問できるサポート体制
+                    <b className="font-text-sp-short text-pink-primary">
+                      いつでもチャットで質問OK。
                     </b>
-                    <span>を整えています。</span>
                   </p>
                   <p className="m-0">&nbsp;</p>
                   <p className="m-0">
-                    チャットで気軽に質問できるから、学習につまずいても安心。
+                    Growbaseでは、
+                    わからないことをため込まず、その場で解決できます。
                   </p>
                   <p className="m-0">
-                    質問フォーマットも用意しているので質問の仕方がわからなくても大丈夫。
-                  </p>
-                  <p className="m-0">&nbsp;</p>
-                  <p className="m-0">
-                    「調べてもよくわからない…」という悩みを、最小限に抑えます。
+                    「どんな風に聞けばいいか分からない…」という人も大丈夫。
                   </p>
                   <p className="m-0">&nbsp;</p>
                   <p className="m-0">
-                    <span>学習中の「ちょっとした疑問」にも</span>
-                    <b className="font-text-sp-short text-blue-primary">
-                      気軽にチャットで質問OK。
-                    </b>
+                    質問のテンプレートも用意しているから、初めてでも気軽に使えます。
+                  </p>
+                  <p className="m-0">&nbsp;</p>
+                  <p className="m-0">
+                    <span>
+                      調べてもよく分からない、同じところで止まってしまう…。
+                    </span>
                   </p>
                   <p className="m-0 ">
                     <span className="font-text-sp-short text-gray">
-                      技術的なトラブルやエラーも、
+                      そんなもやもや時間を、できるだけ減らして、前に進めるように。
                     </span>
-                    <b className="text-blue-primary">
-                      メンターや講師がわかりやすくサポート。
+                    <b className="text-pink-primary">
+                      現役エンジニアや講師が、ただ答えるだけじゃなく、ちゃんと理解できるようにサポート。
                     </b>
                   </p>
                   <p className="m-0">
-                    <b className="font-text-sp-short text-blue-primary">{`回答はわかりやすさ重視！ `}</b>
+                    <b className="font-text-sp-short text-pink-primary">{`回答はわかりやすさ重視！ `}</b>
                     <span>
-                      コピペで済ませない&quot;本当に理解できる説明&quot;
+                      「なるほど、そういうことか！」と腑に落ちるまで、一緒に向き合います。
                     </span>
                   </p>
                   <p className="m-0">&nbsp;</p>
                   <p className="m-0">
-                    初心者にありがちな「調べ疲れ」や「質問しにくさ」を解消し、
+                    わからないことがあっても、ここには“すぐ聞ける場所”があります。
                   </p>
                   <p className="m-0">
-                    安心して手を動かし続けられる環境を提供します。
+                    だから、安心して手を動かし続けられるんです。
                   </p>
                 </div>
               </div>
-
               <button
                 onClick={() => setIsExpanded02(!isExpanded02)}
                 className="w-full flex items-center justify-end mt-2 items-center gap-2 text-xs "
               >
                 <span
                   className={`flex items-center gap-2 text-xs ${
-                    isExpanded02 ? "text-close-icon" : "text-blue-secondary"
+                    isExpanded02 ? "text-close-icon" : "text-pink-secondary"
                   }`}
                 >
                   {isExpanded02 ? "とじる" : "もっと見る"}
@@ -208,7 +240,10 @@ export default function Support() {
               </button>
             </div>
           </div>
-          <div className="w-full relative md:flex md:flex-row md:gap-8">
+          <div
+            ref={support3Ref}
+            className="w-full relative md:flex md:flex-row md:gap-8 fade-in-right"
+          >
             <Image
               className="w-full md:w-[480px] object-cover rounded-lg"
               width={361}
@@ -219,7 +254,7 @@ export default function Support() {
             <div className="md:flex md:flex-col items-start md:flex-1">
               <div className="text-center my-[4px]">
                 <b className="relative text-base md:text-2xl text-center">
-                  豊富な勉強会の実施
+                  つながると、学びはもっと楽しくなる
                 </b>
               </div>
               <div
@@ -227,40 +262,40 @@ export default function Support() {
                   isExpanded03 ? "max-h-[1000px] opacity-100" : "max-h-[56px] "
                 }`}
               >
-                <p className="m-0">勉強って、意外と楽しい。仲間がいれば。</p>
+                <p className="m-0">ひとりで学ぶのは、ちょっと心細い。</p>
                 <p className="m-0">
-                  <span>Growbase Lab では、</span>
-                  <b className="font-noto-sans-jp text-blue-primary">
-                    定期的な勉強会やワークショップを多数開催。
-                  </b>
+                  でも、一緒に頑張る仲間がいるだけで、学びはぐっと前向きになります。
                 </p>
                 <p className="m-0">
-                  Growbase Lab
-                  カフェ（交流会）では受講生同士のつながりもできる。
+                  Growbaseでは、勉強会・ワークショップ・雑談交流会などを定期的に開催。
                 </p>
                 <p className="m-0">&nbsp;</p>
                 <p className="m-0">
-                  講師への質問はもちろん、仲間との交流を通じて、学びがもっと楽しくなります。
+                  気軽に参加できるオンラインの集まりで、自然とつながりが生まれます。
                 </p>
                 <p className="m-0">&nbsp;</p>
                 <p className="m-0">
-                  <span>「他の人も頑張ってる」が感じられる、</span>
-                  <b className="font-noto-sans-jp text-blue-primary">
-                    学習習慣を育てる場。
+                  <span>
+                    「こんなふうに進めてるんだ！」「その考え方いいね」仲間の学び方やつまずきに触れることで、
+                  </span>
+                  <b className="font-noto-sans-jp text-pink-primary">
+                    自分の理解も深まっていく。
                   </b>
                 </p>
                 <p className="m-0">
-                  モチベーションも自然とアップ。&quot;一緒に頑張る&quot;が、あなたの継続を支えます。
+                  横のつながりが生まれるから、孤独感なく続けられるのも大きな魅力です。
                 </p>
                 <p className="m-0">&nbsp;</p>
                 <p className="m-0">
-                  「自分一人だと不安で進まない…」という時期も、
+                  「ちょっと今日はやる気出ないな…」という日も、
                 </p>
                 <p className="m-0">
-                  <b className="font-noto-sans-jp text-blue-primary">
-                    一緒に頑張る仲間がいる空間
+                  <b className="font-noto-sans-jp text-pink-primary">
+                    仲間の頑張る姿に背中を押されて、自然と手が動く。
                   </b>
-                  <span>があれば、自然と前に進めます。</span>
+                  <span>
+                    Growbaseには、一人じゃない安心感と、学び続けられる空気があります。
+                  </span>
                 </p>
               </div>
 
@@ -270,7 +305,7 @@ export default function Support() {
               >
                 <span
                   className={`flex items-center gap-2 text-xs ${
-                    isExpanded03 ? "text-close-icon" : "text-blue-secondary"
+                    isExpanded03 ? "text-close-icon" : "text-pink-secondary"
                   }`}
                 >
                   {isExpanded03 ? "とじる" : "もっと見る"}

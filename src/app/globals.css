@@ -32,6 +32,8 @@ body {
 @theme {
   --color-blue-primary: #187fc3;
   --color-blue-secondary: #08adff;
+  --color-pink-primary: #ff69b4;
+  --color-pink-secondary: #ffb6c1;
   --color-blue-bg: #cae5ed;
   --color-blue-any: #2283ba;
   --color-cornsilk: #d0f0ff;
@@ -305,4 +307,24 @@ body {
 
 .course-item:nth-child(3) {
   transition-delay: 0.5s;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.fade-in-right.visible {
+  animation: fadeInRight 0.8s ease-out forwards;
 }

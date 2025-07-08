@@ -14,6 +14,10 @@ module.exports = {
           light: "#f5f5f5",
           dark: "#222222",
         },
+        pink: {
+          primary: "#FF69B4",
+          secondary: "#FFB6C1",
+        },
       },
       fontFamily: {
         sans: ["Noto Sans JP", "sans-serif"],
